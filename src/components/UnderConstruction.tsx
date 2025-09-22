@@ -1,20 +1,16 @@
-import React from 'react';
-import aceproLogo from '../assets/acepro_logo.png';
+import React from "react";
+import aceproLogo from "../assets/acepro_logo.png";
 
 const UnderConstruction: React.FC = () => {
   return (
-    <div className="h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 relative overflow-hidden">
       {/* Header Navigation */}
-      <header className="relative z-20 w-full">
+      <header className="relative z-20 h-[72px] w-full">
         <nav className="flex items-center justify-between px-6 py-4 bg-black/20 backdrop-blur-md border-b border-blue-800/30">
           <div className="flex items-center">
-            <img 
-              src={aceproLogo} 
-              alt="AcePro Logo" 
-              className="h-10 w-auto"
-            />
+            <img src={aceproLogo} alt="AcePro Logo" className="h-10 w-auto" />
           </div>
-          
+
           {/* Navigation Links */}
           {/* <div className="hidden md:flex items-center space-x-8">
             <a href="#" className="text-gray-300 hover:text-blue-400 transition-colors duration-200">Home</a>
@@ -24,13 +20,13 @@ const UnderConstruction: React.FC = () => {
           </div> */}
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden">
+          {/* <div className="md:hidden">
             <button className="text-gray-300 hover:text-blue-400 transition-colors duration-200">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             </button>
-          </div>
+          </div> */}
         </nav>
       </header>
 
@@ -39,46 +35,49 @@ const UnderConstruction: React.FC = () => {
       <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl"></div>
       <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-blue-400/15 rounded-full blur-3xl"></div>
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl"></div>
-      
+
       {/* Main Content */}
-      <div className="flex items-center justify-center min-h-screen pt-20 px-4">
+      <div className="flex flex-col items-center justify-center h-[calc(100vh-72px)] pt-20 px-4">
         <div className="text-center max-w-2xl mx-auto relative z-10">
-        {/* Main Title */}
-        <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight m-0">
-          UNDER
-        </h1>
-        <h1 className="text-4xl md:text-6xl font-bold text-blue-400 mb-4 leading-tight">
-          CONSTRUCTION
-        </h1>
+          {/* Main Title */}
+          <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight m-0">
+            UNDER
+          </h1>
+          <h1 className="text-4xl md:text-6xl font-bold text-blue-400 mb-4 leading-tight">
+            CONSTRUCTION
+          </h1>
 
-        <h4 className="text-white mb-8">SITE NEARLY READY</h4>
+          <h4 className="text-white mb-8">SITE NEARLY READY</h4>
 
-        {/* Progress Bar */}
-        <div className="h-[32px] w-full max-w-lg mx-auto mb-8">
-            <div className="w-full h-full bg-gray-800/50 rounded overflow-hidden border border-gray-700 backdrop-blur-sm">
-            <div className="h-full bg-gradient-to-r from-blue-500 to-blue-400" style={{ width: '70%' }} />
+          {/* Progress Bar */}
+          <div className="h-[32px] w-full max-w-lg mx-auto mb-8">
+            <div className="w-full h-full bg-gray-800/50 rounded-lg overflow-hidden border border-gray-700 backdrop-blur-sm">
+              <div
+                className="h-full bg-gradient-to-r from-blue-500 to-blue-400"
+                style={{ width: "70%" }}
+              />
             </div>
             <div className="flex justify-between text-xs text-gray-400 mt-1">
-            <span>0%</span>
-            <span>100%</span>
+              <span>0%</span>
+              <span>100%</span>
             </div>
-        </div>
+          </div>
 
-        {/* Notify Me Button */}
-        <button className="bg-gradient-to-r from-blue-500 to-blue-400 hover:from-blue-600 hover:to-blue-500 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-200 mb-8 shadow-lg shadow-blue-500/25 backdrop-blur-sm border border-blue-400/30">
+          {/* Notify Me Button */}
+          <button className="bg-gradient-to-r from-blue-500 to-blue-400 hover:from-blue-600 hover:to-blue-500 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-200 mb-8 shadow-lg shadow-blue-500/25 backdrop-blur-sm border border-blue-400/30">
             Notify Me
-        </button>
+          </button>
 
-        {/* Subtitle */}
-        <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-lg mx-auto leading-relaxed">
-          We're working hard to bring you something amazing. 
-          Stay tuned for updates!
-        </p>
+          {/* Subtitle */}
+          <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-lg mx-auto leading-relaxed">
+            We're working hard to bring you something amazing. Stay tuned for
+            updates!
+          </p>
 
-        {/* Footer */}
-        <div className="fixed bottom-0 left-0 right-0 text-gray-400 text-sm text-center py-4 bg-black/70 backdrop-blur-md border-t border-blue-800/30">
-          <p>&copy; 2025 AcePro. Coming Soon.</p>
-        </div>
+          {/* Footer */}
+          <div className="fixed bottom-0 left-0 right-0 text-gray-400 text-sm text-center py-4 bg-black/70 backdrop-blur-md border-t border-blue-800/30">
+            <p>&copy; 2025 AcePro. Coming Soon.</p>
+          </div>
         </div>
       </div>
     </div>
