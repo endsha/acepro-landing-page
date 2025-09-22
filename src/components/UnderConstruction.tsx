@@ -30,9 +30,9 @@ const UnderConstruction: React.FC = () => {
 
           {/* Progress Bar */}
           <div className="h-[32px] w-full max-w-lg mx-auto mb-8">
-            <div className="w-full h-full bg-gray-200/80 rounded-lg overflow-hidden border border-gray-300 backdrop-blur-sm">
+            <div className="w-full h-full bg-gray-200/80 rounded-lg overflow-hidden border border-gray-300 backdrop-blur-sm shadow-lg">
               <div
-                className="h-full bg-gradient-to-r from-[#e5000c] to-red-500"
+                className="h-full bg-gradient-to-r from-[#e5000c] to-red-500 shadow-md"
                 style={{ width: "70%" }}
               />
             </div>
