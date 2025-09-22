@@ -4,32 +4,6 @@ import aceproLogo from "../assets/acepro_logo.png";
 const UnderConstruction: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 relative overflow-hidden">
-      {/* Header Navigation */}
-      <header className="relative z-20 h-[72px] w-full">
-        <nav className="flex items-center justify-between px-6 py-4 bg-black/20 backdrop-blur-md border-b border-blue-800/30">
-          <div className="flex items-center">
-            <img src={aceproLogo} alt="AcePro Logo" className="h-10 w-auto" />
-          </div>
-
-          {/* Navigation Links */}
-          {/* <div className="hidden md:flex items-center space-x-8">
-            <a href="#" className="text-gray-300 hover:text-blue-400 transition-colors duration-200">Home</a>
-            <a href="#" className="text-gray-300 hover:text-blue-400 transition-colors duration-200">About</a>
-            <a href="#" className="text-gray-300 hover:text-blue-400 transition-colors duration-200">Services</a>
-            <a href="#" className="text-gray-300 hover:text-blue-400 transition-colors duration-200">Contact</a>
-          </div> */}
-
-          {/* Mobile Menu Button */}
-          {/* <div className="md:hidden">
-            <button className="text-gray-300 hover:text-blue-400 transition-colors duration-200">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
-          </div> */}
-        </nav>
-      </header>
-
       {/* Blur Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-blue-700/10 to-black/30 backdrop-blur-3xl"></div>
       <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl"></div>
@@ -37,8 +11,13 @@ const UnderConstruction: React.FC = () => {
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl"></div>
 
       {/* Main Content */}
-      <div className="flex flex-col items-center justify-center h-[calc(100vh-72px)] pt-20 px-4">
+      <div className="flex flex-col items-center justify-center min-h-screen px-4">
         <div className="text-center max-w-2xl mx-auto relative z-10">
+          {/* Logo */}
+          <div className="mb-8">
+            <img src={aceproLogo} alt="AcePro Logo" className="h-16 w-auto mx-auto" />
+          </div>
+
           {/* Main Title */}
           <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight m-0">
             UNDER
