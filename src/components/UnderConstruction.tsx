@@ -1,71 +1,86 @@
 import React from 'react';
+import aceproLogo from '../assets/acepro_logo.png';
 
 const UnderConstruction: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 flex items-center justify-center px-4">
-      <div className="text-center max-w-4xl mx-auto">
-        {/* Construction Icon */}
-        <div className="mb-8">
-          <div className="inline-flex items-center justify-center w-32 h-32 bg-yellow-500 rounded-full shadow-2xl animate-bounce">
-            <svg
-              className="w-16 h-16 text-gray-900"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-            </svg>
+    <div className="h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 relative overflow-hidden">
+      {/* Header Navigation */}
+      <header className="relative z-20 w-full">
+        <nav className="flex items-center justify-between px-6 py-4 bg-black/20 backdrop-blur-md border-b border-blue-800/30">
+          <div className="flex items-center">
+            <img 
+              src={aceproLogo} 
+              alt="AcePro Logo" 
+              className="h-10 w-auto"
+            />
           </div>
-        </div>
+          
+          {/* Navigation Links */}
+          {/* <div className="hidden md:flex items-center space-x-8">
+            <a href="#" className="text-gray-300 hover:text-blue-400 transition-colors duration-200">Home</a>
+            <a href="#" className="text-gray-300 hover:text-blue-400 transition-colors duration-200">About</a>
+            <a href="#" className="text-gray-300 hover:text-blue-400 transition-colors duration-200">Services</a>
+            <a href="#" className="text-gray-300 hover:text-blue-400 transition-colors duration-200">Contact</a>
+          </div> */}
 
+          {/* Mobile Menu Button */}
+          <div className="md:hidden">
+            <button className="text-gray-300 hover:text-blue-400 transition-colors duration-200">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </nav>
+      </header>
+
+      {/* Blur Background Elements */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-blue-700/10 to-black/30 backdrop-blur-3xl"></div>
+      <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-blue-400/15 rounded-full blur-3xl"></div>
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl"></div>
+      
+      {/* Main Content */}
+      <div className="flex items-center justify-center min-h-screen pt-20 px-4">
+        <div className="text-center max-w-2xl mx-auto relative z-10">
         {/* Main Title */}
-        <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-          Under
-          <span className="text-yellow-400 block">Construction</span>
+        <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight m-0">
+          UNDER
+        </h1>
+        <h1 className="text-4xl md:text-6xl font-bold text-blue-400 mb-4 leading-tight">
+          CONSTRUCTION
         </h1>
 
+        <h4 className="text-white mb-8">SITE NEARLY READY</h4>
+
+        {/* Progress Bar */}
+        <div className="h-[32px] w-full max-w-lg mx-auto mb-8">
+            <div className="w-full h-full bg-gray-800/50 rounded overflow-hidden border border-gray-700 backdrop-blur-sm">
+            <div className="h-full bg-gradient-to-r from-blue-500 to-blue-400" style={{ width: '70%' }} />
+            </div>
+            <div className="flex justify-between text-xs text-gray-400 mt-1">
+            <span>0%</span>
+            <span>100%</span>
+            </div>
+        </div>
+
+        {/* Notify Me Button */}
+        <button className="bg-gradient-to-r from-blue-500 to-blue-400 hover:from-blue-600 hover:to-blue-500 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-200 mb-8 shadow-lg shadow-blue-500/25 backdrop-blur-sm border border-blue-400/30">
+            Notify Me
+        </button>
+
         {/* Subtitle */}
-        <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-lg mx-auto leading-relaxed">
           We're working hard to bring you something amazing. 
           Stay tuned for updates!
         </p>
 
-        {/* Progress Bar */}
-        <div className="w-full max-w-md mx-auto mb-8">
-          <div className="bg-gray-700 rounded-full h-3 overflow-hidden">
-            <div className="bg-gradient-to-r from-yellow-400 to-orange-500 h-full rounded-full animate-pulse" style={{width: '65%'}}></div>
-          </div>
-          <p className="text-gray-400 text-sm mt-2">65% Complete</p>
-        </div>
-
-        {/* Contact Info */}
-        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 max-w-md mx-auto border border-white/20">
-          <h3 className="text-xl font-semibold text-white mb-4">Get Notified</h3>
-          <p className="text-gray-300 text-sm mb-4">
-            Want to be the first to know when we launch?
-          </p>
-          <div className="flex flex-col sm:flex-row gap-3">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-4 py-2 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
-            />
-            <button className="px-6 py-2 bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2 focus:ring-offset-transparent">
-              Notify Me
-            </button>
-          </div>
-        </div>
-
         {/* Footer */}
-        <div className="mt-12 text-gray-400 text-sm">
+        <div className="fixed bottom-0 left-0 right-0 text-gray-400 text-sm text-center py-4 bg-black/70 backdrop-blur-md border-t border-blue-800/30">
           <p>&copy; 2025 AcePro. Coming Soon.</p>
         </div>
+        </div>
       </div>
-
-      {/* Floating Elements */}
-      <div className="absolute top-20 left-10 w-4 h-4 bg-yellow-400 rounded-full animate-ping opacity-75"></div>
-      <div className="absolute top-40 right-20 w-6 h-6 bg-purple-400 rounded-full animate-pulse"></div>
-      <div className="absolute bottom-32 left-20 w-3 h-3 bg-blue-400 rounded-full animate-bounce"></div>
-      <div className="absolute bottom-20 right-10 w-5 h-5 bg-pink-400 rounded-full animate-ping opacity-50"></div>
     </div>
   );
 };
